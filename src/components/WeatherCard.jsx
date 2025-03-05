@@ -14,6 +14,10 @@ export default function WeatherCard({
 		conditionMap[isToday ? currentWeather.weathercode : condition] ||
 		conditionMap[100];
 
+	const yesterday = new Date();
+	yesterday.setDate(yesterday.getDate() - 1);
+	const isYesterday = date === yesterday.toLocaleDateString();
+
 	const tomorrow = new Date();
 	tomorrow.setDate(tomorrow.getDate() + 1);
 	const isTomorrow = date === tomorrow.toLocaleDateString();
@@ -24,7 +28,10 @@ export default function WeatherCard({
 		>
 			<CardHeader className='flex items-center flex-col p-0 pt-2'>
 				<h3 className='text-center text-lg font-bold'>
-					{(isToday && 'Today') || (isTomorrow && 'Tomorrow') || date}
+					{(isToday && 'Today') ||
+						(isYesterday && 'Yesterday') ||
+						(isTomorrow && 'Tomorrow') ||
+						date}
 				</h3>
 				<img src={icon} alt={title} className='h-32 w-32' />
 			</CardHeader>
