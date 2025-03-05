@@ -63,7 +63,7 @@ export default function SearchBar() {
 			</div>
 
 			<Autocomplete
-				placeholder='Search for city'
+				placeholder='Search for city...'
 				type='text'
 				onSelectionChange={handleSelectSuggestion}
 				onInputChange={handleInputChange}
