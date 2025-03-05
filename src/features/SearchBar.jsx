@@ -67,11 +67,18 @@ export default function SearchBar() {
 				type='text'
 				onSelectionChange={handleSelectSuggestion}
 				onInputChange={handleInputChange}
-				aria-labelledby='city-search-label'
+				aria-labelledby='city search input'
 				size='lg'
 				color='primary'
 				radius='full'
 				className='w-96'
+				popoverProps={{
+					offset: 10,
+					classNames: {
+						base: 'rounded-large',
+						content: 'bg-primary-300',
+					},
+				}}
 			>
 				{suggestions.map((suggestion) => (
 					<AutocompleteItem
