@@ -35,20 +35,30 @@ export default function WeatherCard({
 				</h3>
 				<img src={icon} alt={title} className='h-32 w-32' />
 			</CardHeader>
-			<CardBody className=''>
-				{isToday && (
+			<CardBody>
+				{isToday ? (
 					<p className='text-center text-2xl font-black'>
 						{currentWeather.temperature}°F
 					</p>
+				) : (
+					<div className='flex-1'></div>
 				)}
 				<p className='text-center text-md font-semibold'>{title}</p>
-				<p className='text-center text-md font-semibold'>
-					High: {high}°F | Low: {low}°F
-				</p>
-				<p className='text-center text-md font-semibold'>
-					Wind Speed: {isToday ? currentWeather.windspeed : windSpeed}{' '}
-					mph
-				</p>
+				<div className='flex justify-between mt-4'>
+					<p className='text-md font-semibold'>High:</p>
+					<p className='text-md text-primary-200'>{high}°F</p>
+				</div>
+				<div className='flex justify-between'>
+					<p className='text-md font-semibold'>Low:</p>
+					<p className='text-md text-primary-200'>{low}°F</p>
+				</div>
+
+				<div className='flex justify-between'>
+					<p className='text-md font-semibold'>Wind Speed:</p>
+					<p className='text-md text-primary-200'>
+						{isToday ? currentWeather.windspeed : windSpeed} mph
+					</p>
+				</div>
 			</CardBody>
 		</Card>
 	);
