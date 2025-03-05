@@ -24,7 +24,7 @@ export default function WeatherCard({
 
 	return (
 		<Card
-			className={`${(isToday && 'bg-transparent border-primary-300 border-4') || 'bg-primary-500 night:bg-primary-800 w-56'} items-center`}
+			className={`${(isToday && 'bg-transparent border-primary-300 border-4') || 'bg-primary-500 night:bg-primary-800'} items-center w-56 shadow-none`}
 		>
 			<CardHeader className='flex items-center flex-col p-0 pt-2'>
 				<h3 className='text-center text-lg font-bold'>
