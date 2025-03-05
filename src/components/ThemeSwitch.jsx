@@ -16,8 +16,7 @@ export default function ThemeSwitch() {
 
 	return (
 		<Button
-			variant='bordered'
-			className='p-1 min-w-10 min-h-10'
+			className='p-1 min-w-10 min-h-10 bg-primary-500 night:bg-primary-800'
 			onPress={() => handleToggleNight()}
 		>
 			<img
