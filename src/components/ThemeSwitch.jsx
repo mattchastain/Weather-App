@@ -21,7 +21,7 @@ export default function ThemeSwitch() {
 			className='p-1 min-w-10 min-h-10 bg-primary-500 night:bg-primary-800'
 			onPress={() => handleToggleNight()}
 		>
-			<img src={isNight ? ClearNight : ClearDay} alt='' />
+			{isNight ? ClearNight : ClearDay}
 		</Button>
 	);
 }
