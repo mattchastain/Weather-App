@@ -1,7 +1,7 @@
 import { Button } from '@heroui/button';
 import { useEffect, useState } from 'react';
-import ClearDay from '../assets/svg/clear-day.svg?raw';
-import ClearNight from '../assets/svg/clear-night.svg?raw';
+import ClearDay from '../assets/svg/clear-day.svg?react';
+import ClearNight from '../assets/svg/clear-night.svg?react';
 
 const root = document.querySelector(':root');
 
@@ -21,7 +21,7 @@ export default function ThemeSwitch() {
 			className='p-1 min-w-10 min-h-10 bg-primary-500 night:bg-primary-800'
 			onPress={() => handleToggleNight()}
 		>
-			{isNight ? ClearNight : ClearDay}
+			<img src={isNight ? ClearNight : ClearDay} alt='' />
 		</Button>
 	);
 }
