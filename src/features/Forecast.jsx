@@ -16,7 +16,7 @@ export default function Forecast() {
 
 	return (
 		<div>
-			<div className='mx-4 md:mx-20'>
+			<div className='mx-20'>
 				<div className='flex justify-center gap-2'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'

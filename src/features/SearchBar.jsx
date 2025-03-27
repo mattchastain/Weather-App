@@ -55,12 +55,9 @@ export default function SearchBar() {
 
 	return (
 		<div className='flex justify-center items-center m-4 mt-6'>
-			<div className='absolute left-2 md:left-6 flex items-center gap-4'>
-				<ThemeSwitch />
-				<h1 className='invisible md:visible text-xl font-bold'>
-					Weather App
-				</h1>
-			</div>
+			<h1 className='absolute left-8 invisible md:visible text-xl font-bold'>
+				Weather App
+			</h1>
 
 			<Autocomplete
 				placeholder='Search for city...'

@@ -18,7 +18,7 @@ export default function ThemeSwitch() {
 
 	return (
 		<Button
-			className='p-1 min-w-10 min-h-10 bg-primary-500 night:bg-primary-800'
+			className='absolute bottom-4 right-4 p-1 min-w-10 min-h-10 bg-primary-500 night:bg-primary-800'
 			aria-label='toggle theme'
 			onPress={() => handleToggleNight()}
 		>
