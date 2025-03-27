@@ -19,9 +19,10 @@ export default function ThemeSwitch() {
 	return (
 		<Button
 			className='p-1 min-w-10 min-h-10 bg-primary-500 night:bg-primary-800'
+			aria-label='toggle theme'
 			onPress={() => handleToggleNight()}
 		>
-			<img src={isNight ? ClearNight : ClearDay} alt='' />
+			<img src={isNight ? ClearNight : ClearDay} alt='icon' />
 		</Button>
 	);
 }
