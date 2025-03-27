@@ -76,7 +76,7 @@ export default function SearchBar() {
 					offset: 10,
 					classNames: {
 						base: 'rounded-large',
-						content: 'bg-primary-300',
+						content: 'bg-primary-500',
 					},
 				}}
 			>
